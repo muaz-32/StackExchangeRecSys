@@ -1,6 +1,8 @@
 import xml.etree.ElementTree as ET
 import csv
 
+# Root Directory
+ROOT_DIR = "../.."
 
 def generate_questions_table_with_tags(file_path, output_csv):
     """
@@ -74,8 +76,8 @@ def generate_questions_table_with_tags(file_path, output_csv):
 
 
 # File paths
-input_file = "../../data/genai.stackexchange.com/Posts.xml"  # Replace with actual file path
-output_file = "../../output/dump/users.questions.table.csv"
+input_file = f"{ROOT_DIR}/data/genai.stackexchange.com/Posts.xml"  # Replace with actual file path
+output_file = f"{ROOT_DIR}/output/dump/users.questions.table.csv"
 
 # Generate the questions table
 generate_questions_table_with_tags(input_file, output_file)

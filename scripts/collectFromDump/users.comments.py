@@ -1,6 +1,8 @@
 import xml.etree.ElementTree as ET
 import csv
 
+# Root Directory
+ROOT_DIR = "../.."
 
 def extract_post_data(posts_file_path):
     """
@@ -138,9 +140,9 @@ def convert_comments_to_csv(comments_file_path, posts_file_path, output_csv):
 
 
 # File paths
-comments_file = "../../data/genai.stackexchange.com/Comments.xml"  # Replace with actual file path
-posts_file = "../../data/genai.stackexchange.com/Posts.xml"  # Replace with actual file path
-output_file = "../../output/dump/users.comments.table.csv"
+comments_file = f"{ROOT_DIR}/data/genai.stackexchange.com/Comments.xml"  # Replace with actual file path
+posts_file = f"{ROOT_DIR}/data/genai.stackexchange.com/Posts.xml"  # Replace with actual file path
+output_file = f"{ROOT_DIR}/output/dump/users.comments.table.csv"
 
 # Generate the comments table with tags
 convert_comments_to_csv(comments_file, posts_file, output_file)
