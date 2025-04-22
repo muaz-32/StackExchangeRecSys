@@ -83,8 +83,8 @@ def generate_answers_table(file_path, output_csv):
 
 
 # File paths
-input_file = "../data/ai.stackexchange.com/Posts.xml"  # Replace with actual file path
-output_file = "../output/users.answers.table.csv"
+input_file = "../../data/genai.stackexchange.com/Posts.xml"  # Replace with actual file path
+output_file = "../../output/dump/users.answers.table.csv"
 
 # Generate the answers table
 generate_answers_table(input_file, output_file)

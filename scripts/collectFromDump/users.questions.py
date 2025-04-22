@@ -74,8 +74,8 @@ def generate_questions_table_with_tags(file_path, output_csv):
 
 
 # File paths
-input_file = "../data/ai.stackexchange.com/Posts.xml"  # Replace with actual file path
-output_file = "../output/users.questions.table.csv"
+input_file = "../../data/genai.stackexchange.com/Posts.xml"  # Replace with actual file path
+output_file = "../../output/dump/users.questions.table.csv"
 
 # Generate the questions table
 generate_questions_table_with_tags(input_file, output_file)
