@@ -10,7 +10,7 @@ csv_file = f"{ROOT_DIR}/output/dump/users.answers.table.csv"
 json_file = f"{ROOT_DIR}/output/features/users_accepted_answers_tags.json"
 
 # Initialize a dictionary to store accepted answers tags
-users_accepted_answers_tags = defaultdict(set)
+users_accepted_answers_tags = defaultdict(list)
 
 # Read the CSV file
 with open(csv_file, mode='r', encoding='utf-8') as file:
@@ -22,7 +22,7 @@ with open(csv_file, mode='r', encoding='utf-8') as file:
             user_id = row[0]
             accepted_tag = row[8]
             if accepted_tag:  # Ensure the tag is not empty
-                users_accepted_answers_tags[user_id].add(accepted_tag)
+                users_accepted_answers_tags[user_id].append(accepted_tag)
 
 # Write the accepted answers tags to a JSON file
 with open(json_file, mode='w', encoding='utf-8') as file:

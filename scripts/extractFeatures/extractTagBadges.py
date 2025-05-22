@@ -10,7 +10,7 @@ csv_file = f"{ROOT_DIR}/output/api/tag_based_badges.csv"
 json_file = f"{ROOT_DIR}/output/features/users_tag_badges.json"
 
 # Initialize a dictionary to store user tags
-user_tags = defaultdict(set)
+user_tags = defaultdict(list)
 
 # Read the CSV file
 with open(csv_file, mode='r', encoding='utf-8') as file:
@@ -23,7 +23,7 @@ with open(csv_file, mode='r', encoding='utf-8') as file:
         count = row[3]
         if badge:  # Ensure the tag is not empty
             # Add the badge, rank and count to the user_tags
-            user_tags[user_id].add((badge, rank, count))
+            user_tags[user_id].append((badge, rank, count))
 
 # Write the user_tags in a file
 with open(json_file, mode='w', encoding='utf-8') as file:

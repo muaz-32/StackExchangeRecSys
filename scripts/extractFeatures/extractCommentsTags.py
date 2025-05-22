@@ -10,7 +10,7 @@ csv_file = f"{ROOT_DIR}/output/dump/users.comments.table.csv"
 json_file = f"{ROOT_DIR}/output/features/users_comments_tags.json"
 
 # Initialize a dictionary to store comments tags
-users_comments_tags = defaultdict(set)
+users_comments_tags = defaultdict(list)
 
 # Read the CSV file
 with open(csv_file, mode='r', encoding='utf-8') as file:
@@ -20,7 +20,7 @@ with open(csv_file, mode='r', encoding='utf-8') as file:
         user_id = row[0]
         comment_tag = row[4]
         if comment_tag:  # Ensure the tag is not empty
-            users_comments_tags[user_id].add(comment_tag)
+            users_comments_tags[user_id].append(comment_tag)
 
 # Write the comments tags to a JSON file
 with open(json_file, mode='w', encoding='utf-8') as file:
