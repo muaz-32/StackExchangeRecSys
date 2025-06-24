@@ -1,0 +1,28 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=PyCharm
+
+### StackExchange total users
+https://api.stackexchange.com/2.2/users?site=ai.stackexchange.com&filter=total
+
+### StackExchange user all badges
+https://api.stackexchange.com/2.3/users/45381/badges?site=ai.stackexchange.com
+
+### user count in genai.stackexchange.com
+GET https://api.stackexchange.com/2.3/info?site=genai.stackexchange.com
+
+###
+GET https://api.stackexchange.com/2.3/badges?site=genai.stackexchange.com&inname=Nice+Answer
+
+###
+GET https://api.stackexchange.com/2.3/badges/23/recipients?site=genai.stackexchange.com&pagesize=100
+
+###
+GET https://api.stackexchange.com/2.3/users/2444/badges?site=genai.stackexchange.com&pagesize=100
+
+###
+GET https://api.stackexchange.com/2.3/questions?site=stackoverflow&key=rl_dR5mDxPc3G6gLj5AQZofBsd6R
+
+###
+GET https://api.stackexchange.com/2.3/users/109?site=genai.stackexchange.com
+
