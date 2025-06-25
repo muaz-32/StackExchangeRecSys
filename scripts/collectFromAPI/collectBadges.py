@@ -122,4 +122,4 @@ def generate_badges_tables(users_file, output_dir):
 
 # Run the script
 if __name__ == "__main__":
-    generate_badges_tables(users_file=f"{ROOT_DIR}/output/api/users_part2.csv", output_dir=f"{ROOT_DIR}/output/api")
+    generate_badges_tables(users_file=f"{ROOT_DIR}/output/api/users.csv", output_dir=f"{ROOT_DIR}/output/api")
